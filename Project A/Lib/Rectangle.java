@@ -34,10 +34,21 @@ public class Rectangle {
     }
 
     public boolean contains(int x, int y){
-
+        if(x >= this.x && x <= this.x+this.w &&
+            y >= this.y && y <= this.y+this.h){
+            return true;
+        }
+        return false;
     }
 
     public boolean contains(Point p){
-
+        /*
+        if(p.getX() >= this.x && p.getX() <= this.x+this.w &&
+                p.getY() >= this.y && p.getY() <= this.y+this.h){
+            return true
+        }
+        return false;
+         */
+        return this.contains(p.getX(), p.getY());
     }
 }
